@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie-Calculator</title>
+    <link rel="stylesheet" href="./index.css">
+    <script defer src="./index.js"></script>
+</head>
+<body>
+      <h1>Калькулятор калорий</h1>
+
+      <!-- Форма для добавления продуктов -->
+      <h2>Добавить продукт</h2>
+      <input type="text" id="productName" placeholder="Название продукта">
+      <input type="number" id="productCalories" placeholder="Калории">
+      <button onclick="addProduct()">Добавить</button>
+  
+      <input type="text" id="productFilter" placeholder="Фильтр по названию" oninput="filterProducts()">
+      <button onclick="filterProducts()">Применить фильтр</button>
+
+      <!-- Список продуктов -->
+      <h2>Список продуктов</h2>
+      <!-- <button onclick="sortProductList()">Сортировать по калорийности</button> -->
+      <button onclick="toggleSorting()">Изменить порядок сортировки</button>
+      <ul id="productList"></ul>
+  
+      <!-- График для визуализации списка продуктов -->
+      <h2>График</h2>
+      <canvas id="chart" width="400" height="200"></canvas>
+  
+      <!-- Подсчет и отображение съеденных калорий -->
+      <h2>Съеденные калории</h2>
+      <p id="totalCalories">0 ккал</p>
+  
+      <!-- Целевые показатели калорийности -->
+      <h2>Целевые калории на день</h2>
+      <input type="number" id="dailyGoal" placeholder="Целевые калории">
+      <button onclick="setDailyGoal()">Установить</button>
+  
+      <!-- Предупреждение о превышении лимита -->
+      <p id="warning" style="color: red;"></p>
+  
+      <!-- Кнопка для очистки данных -->
+      <button onclick="clearAllData()">Очистить все данные</button>
+</body>
+</html>
